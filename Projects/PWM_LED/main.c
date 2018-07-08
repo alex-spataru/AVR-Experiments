@@ -16,7 +16,7 @@ static const float PERIOD = 1000;
  * cannot exceed the value of PERIOD.
  */ 
 static const float MIN_BRIGHTNESS = 0;
-static const float MAX_BRIGHTNESS = 600;
+static const float MAX_BRIGHTNESS = 1000;
 
 /*
  * Include libs
