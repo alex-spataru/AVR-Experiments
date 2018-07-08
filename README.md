@@ -9,7 +9,7 @@ To test these projects, I am using a custom board based on the AtMega328P and an
 
 You can see some photos and EAGLE files for my custom board in the 'MCU' folder (which is under construction).
 
-![Board running PWM LED example](MCU/Photos/Board running PWM LED example.jpg)
+![Board running PWM LED example](https://raw.githubusercontent.com/alex-spataru/AVR-Experiments/master/MCU/Photos/Board%20running%20PWM%20LED%20example.jpg)
 
 ## Compiling
 
