@@ -7,6 +7,11 @@
  */
 
 /*
+ * Set clock speed
+ */
+#define F_CPU 16000000
+
+/*
  * Define the period of the LED cycle
  */ 
 static const float PERIOD = 1000;
@@ -28,10 +33,10 @@ static const float MAX_BRIGHTNESS = 1000;
  * Custom delay implementation to get around error:
  *      __builtin_avr_delay_cycles expects a compile time integer constant
  */ 
-static void delay (const int milliseconds) 
+static void delay (const int milliseconds)
 {
     int i;
-    for (i = 0; i < milliseconds; ++i) 
+    for (i = 0; i < milliseconds; ++i)
         _delay_us (1);
 }
 

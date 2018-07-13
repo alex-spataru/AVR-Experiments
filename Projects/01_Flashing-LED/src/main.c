@@ -6,6 +6,11 @@
  */ 
 
 /*
+ * Define clock speed
+ */
+#define F_CPU 16000000
+
+/*
  * Include libraries
  */
 #include <avr/io.h>

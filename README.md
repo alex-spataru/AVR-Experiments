@@ -5,21 +5,15 @@ Feel free to use and modify these programs in your own quest to learn AVR progra
 
 ## MCU Notes
 
-To test these projects, I am using a custom board based on the AtMega328P and an USBAsp v2.0 programmer, you will need to change the Makefile(s) for each project in order to suit your hardware.
+To test these projects, I am using a custom board based on the AtMega328P and an USBAsp v2.0 programmer, you may need to change the `MCU-Setup.pri` file in order to suit your hardware.
 
 You can see some photos and EAGLE files for my custom board in the 'MCU' folder (which is under construction).
 
-![Board running PWM LED example](https://raw.githubusercontent.com/alex-spataru/AVR-Experiments/master/MCU/Photos/Board%20running%20PWM%20LED%20example.jpg)
+![Board running Fading LED example](https://raw.githubusercontent.com/alex-spataru/AVR-Experiments/master/MCU/Photos/Board%20running%20Fading%20LED%20example.jpg)
 
 ## Compiling
 
-These projects where compiled and uploaded under Linux, you may need to change the Makefiles (or use Atmel Studio) to upload them using other operating systems.
-
-I am planning to create a Qt Creator subdirs project, which could present the following advantages:
-
-- Qt Creator's code editor is very good. And I am very familiar with it.
-- We can define the location of avrdude and avr-gcc for each operating system, so that you (maybe) won't need to modify the compiler options.
-- All avrdude-related constants can be defined in the top project, which could make your life easier when testing these programs with other MCUs and programmers.
+These projects are designed to be compiled and uploaded with [Qt Creator](http://doc.qt.io/qtcreator/). Once you have Qt Creator installed, open the `*.pro` files withing Qt Creator and hit the run button to test the projects. You can change the MCU, programmer, serial port and other options in the `MCU-Setup.pri` file that is loaded with each project.
 
 ## License
 
