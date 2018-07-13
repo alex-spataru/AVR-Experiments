@@ -9,9 +9,9 @@ To test these projects, I am using a custom board based on the AtMega328P and an
 
 You can see some photos and EAGLE files for my custom board in the 'MCU' folder (which is under construction).
 
-<center>
 ![Board running Fading LED example](https://raw.githubusercontent.com/alex-spataru/AVR-Experiments/master/MCU/MCU_Small.jpg)
-</center>
+
+**Photo Description:** *Custom board running the Fading LED example*
 
 ## Compiling
 
