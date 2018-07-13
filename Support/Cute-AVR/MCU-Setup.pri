@@ -29,7 +29,11 @@ MCU = ATmega328P
 #
 # Specify the serial port to which the programmer is connected
 #
-UPLOADER_PORT = usb
+linux*:!android {
+    UPLOADER_PORT = usb
+} win32* {
+    UPLOADER_PORT = COM1
+}
 
 #
 # Set the baudrate of the programmer connection for avrdude
@@ -45,6 +49,7 @@ UPLOADER_PROGRAMMER = usbasp
 # Set the part number of the microcontroller for avrdude (sometimes avrdude uses different
 # part number from the actual part number of the microcontroller)
 # leave the following line unchanged if the part numbers are equal.
+#
 UPLOADER_PARTNO = $$MCU
 
 #
@@ -53,18 +58,22 @@ UPLOADER_PARTNO = $$MCU
 COMPILER_OPTIMATZTION_LEVEL = 1
 
 #
-# Set the avr-gnu toolchain path (Linux 64-bit, using system packages)
+# Set the AVR compiler and avrdude paths
 #
-linux* {
+linux*:!android {
+    UPLOADER_DIR = "/usr/bin"
     AVR_COMPILER_DIR = "/usr/bin"
     AVR_TOOLCHAIN_DIR = "/usr/lib/avr"
-}
-
-#
-# Set the uploader (avrdude) path
-#
-linux* {
-    UPLOADER_DIR = "/usr/bin"
+} win32* {
+    ARDUINO_TOOLS_DIR = "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\avr"
+    UPLOADER_DIR = "$$ARDUINO_TOOLS_DIR\\bin"
+    AVR_TOOLCHAIN_DIR = "$$ARDUINO_TOOLS_DIR\\avr"
+    AVR_COMPILER_DIR = "$$ARDUINO_TOOLS_DIR\\bin"
+} macx* {
+    ARDUINO_TOOLS_DIR = "/Applications/Arduino.app/" # Figure it out
+    UPLOADER_DIR = "$$ARDUINO_TOOLS_DIR/bin"
+    AVR_TOOLCHAIN_DIR = "$$ARDUINO_TOOLS_DIR/avr"
+    AVR_COMPILER_DIR = "$$ARDUINO_TOOLS_DIR/bin"
 }
 
 #
