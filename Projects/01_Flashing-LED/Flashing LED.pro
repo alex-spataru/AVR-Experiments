@@ -30,7 +30,6 @@ TARGET = PWM_LED
 # Import Cute-AVR setup
 #-------------------------------------------------------------------------------
 
-include (../../Support/Cute-AVR/MCU-Setup.pri)
 include (../../Support/Cute-AVR/Cute-AVR.pri)
 
 #-------------------------------------------------------------------------------

@@ -16,7 +16,7 @@
  */ 
 static const float PERIOD = 1000;
 
-/**
+/*
  * Define the minimum and maximum brightness of the LED. The maximum brightness
  * cannot exceed the value of PERIOD.
  */ 
