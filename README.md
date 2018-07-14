@@ -15,7 +15,7 @@ You can see some photos and EAGLE files for my custom board in the 'MCU' folder 
 
 ## Compiling
 
-These projects are designed to be compiled and uploaded with [Qt Creator](http://doc.qt.io/qtcreator/). Once you have Qt Creator installed, open the `*.pro` files withing Qt Creator and hit the run button to test the projects. You can change the MCU, programmer, serial port and other options in the `MCU-Setup.pri` file that is loaded with each project.
+These projects are designed to be compiled and uploaded with [Qt Creator](http://doc.qt.io/qtcreator/). Once you have Qt Creator installed, open the `*.pro` files withing Qt Creator and hit the build button (Ctrl+B) to test the projects. You can change the MCU, programmer, serial port and other options in the `MCU-Setup.pri` file that is loaded with each project.
 
 ## License
 
