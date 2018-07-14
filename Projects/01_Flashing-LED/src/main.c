@@ -5,14 +5,6 @@
  * Program description: Turns a LED on and off every 1 second
  */ 
 
-/*
- * Define clock speed
- */
-#define F_CPU 16000000
-
-/*
- * Include libraries
- */
 #include <avr/io.h>
 #include <util/delay.h>
 

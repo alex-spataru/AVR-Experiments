@@ -6,10 +6,8 @@
  *                     of one second in a nice cycle.
  */
 
-/*
- * Set clock speed
- */
-#define F_CPU 16000000
+#include <avr/io.h>
+#include <util/delay.h>
 
 /*
  * Define the period of the LED cycle
@@ -22,12 +20,6 @@ static const float PERIOD = 1000;
  */ 
 static const float MIN_BRIGHTNESS = 0;
 static const float MAX_BRIGHTNESS = 1000;
-
-/*
- * Include libs
- */ 
-#include <avr/io.h>
-#include <util/delay.h>
 
 /* 
  * Custom delay implementation to get around error:

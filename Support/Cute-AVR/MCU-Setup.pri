@@ -27,6 +27,12 @@ OBJECTS_DIR = obj
 MCU = ATmega328P
 
 #
+# Set MCU frequency (based on the crystal oscillator of your board)
+# The MCU/board configuration that I use runs at 16 MHz.
+#
+MCU_FREQ = 16000000UL
+
+#
 # Specify the serial port to which the programmer is connected
 #
 linux*:!android {
