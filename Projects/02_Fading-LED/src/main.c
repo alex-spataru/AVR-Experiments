@@ -12,14 +12,14 @@
 /*
  * Define the period of the LED cycle
  */ 
-static const float PERIOD = 1000;
+static const double PERIOD = 1000;
 
 /*
  * Define the minimum and maximum brightness of the LED. The maximum brightness
  * cannot exceed the value of PERIOD.
  */ 
-static const float MIN_BRIGHTNESS = 0;
-static const float MAX_BRIGHTNESS = 1000;
+static const double MIN_BRIGHTNESS = 0;
+static const double MAX_BRIGHTNESS = 1000;
 
 /* 
  * Custom delay implementation to get around error:
@@ -53,7 +53,7 @@ int main (void)
             changeRate *= -1;
         
         /* Calulate delay time using brightness */
-        int off_time = floor (PERIOD - brightness);
+        int off_time = (int) (PERIOD - brightness);
         
         /* Turn LED off */
         PORTB = 0x00;
@@ -61,9 +61,6 @@ int main (void)
         
         /* Turn LED on */
         PORTB = 0x20;
-        delay (PERIOD - off_time);
+        delay ((int) (PERIOD - off_time));
     }
-
-    /* Exit (should not happen during normal operation */
-    return 0;
 }

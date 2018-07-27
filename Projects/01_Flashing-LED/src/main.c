@@ -31,7 +31,4 @@ int main (void)
         /* Wait a little */
         _delay_ms (1000);
     }
-
-    /* Exit (should not happen during normal operation */
-    return 0;
 }
