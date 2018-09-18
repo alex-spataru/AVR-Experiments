@@ -69,7 +69,11 @@ COMPILER_OPTIMATZTION_LEVEL = 1
 linux*:!android {
     UPLOADER_DIR = "/usr/bin"
     AVR_COMPILER_DIR = "/usr/bin"
-    AVR_TOOLCHAIN_DIR = "/usr/lib/avr"
+    exists("/usr/lib/avr") {
+       AVR_TOOLCHAIN_DIR = "/usr/lib/avr"
+    } else {
+       AVR_TOOLCHAIN_DIR = "/usr/avr"
+    }
 } win32* {
     ARDUINO_TOOLS_DIR = "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\avr"
     UPLOADER_DIR = "$$ARDUINO_TOOLS_DIR\\bin"
